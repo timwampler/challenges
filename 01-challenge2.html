@@ -1,0 +1,28 @@
+<html>
+<head><title>Palindrome - Javascript</title>
+</head>
+<body>
+  Enter any word: <input type="text" id="text">
+  <input type="submit" value="Check" onclick="palindrome()">
+  <script type="text/javascript">
+  function palindrome () {
+        revString = ""; // reverse string
+        inpString = document.getElementById("text").value;
+        i = inpString.length;
+        
+        for(var j=i; j>=0; j--){
+          revString = revString + inpString.charAt(j);
+          document.write(revString+"<br>");
+      }
+      
+        if(inpString === revString) {
+        alert(inpString+" is a Palindrome.");
+        }
+        else{
+        alert(inpString+" is not a Palindrome.");
+  }
+  }
+  </script>
+  
+</body>
+</html>
